@@ -21,12 +21,8 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $categoryIDs = Category::all()->pluck('id')->toArray();
         return [
-            'title'         => $this->faker->title(),
-            'desciption'    => $this->faker->text(),
-            'reward'        => $this->faker->numberBetween(1, 100),
-            'category_id'   => $this->faker->randomElement($categoryIDs)
+            'title' => $this->faker->title()
         ];
     }
 }
